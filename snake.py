@@ -159,5 +159,3 @@ class snake:
 
 		pygame.quit()
 
-game=snake()
-game.Play_Mini()
