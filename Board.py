@@ -49,7 +49,7 @@ class Player:
             image_path_temp = "images\playerFour.png"
             self.grid=(0,6)
 
-        self.coins=0
+        self.coins=3
         self.min_roll=1
         self.max_roll=6
         self.movesToWin=boardsize
@@ -557,7 +557,6 @@ def green_land(player):
 
 
     rand=random.randrange(1,4)
-    rand=3
 
 
     def green_land_1():
@@ -640,5 +639,6 @@ def play(menu,players):
     root = Tk()
     root.title("Board")
     board = Board(menu,players)
+    root.winfo_toplevel().positionfrom("user")
     root.mainloop()
 
