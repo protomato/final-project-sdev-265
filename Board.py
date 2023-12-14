@@ -5,6 +5,7 @@ import pygame
 import random
 from MiniGame_One import MiniGame_One 
 from MiniGame_Two import MiniGame_Two 
+from snake import snake
 from input_text import InputText
 from flappy_bird import flappyBird
 
@@ -492,18 +493,20 @@ def blue_land(player):
 def red_land(player):
 
 
-    rand=random.randrange(1,4)
-
-
+    rand=random.randrange(1,5)
+    rand=1
 
     def red_land_1():
         rand=random.randrange(1,4)
+        rand=4
         if rand==1:
             game = MiniGame_One()
         elif rand==2:
             game = MiniGame_Two()
         elif rand==3:
             game = flappyBird()
+        elif rand==4:
+            game = snake()
         else:
              ("HGBI*YGBI*YB")
 
@@ -641,4 +644,3 @@ def play(menu,players):
     board = Board(menu,players)
     root.winfo_toplevel().positionfrom("user")
     root.mainloop()
-
